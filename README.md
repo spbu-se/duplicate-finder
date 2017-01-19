@@ -1,7 +1,7 @@
 Duplicate Finder
 ================
 
-Duplicate finder is a tool that allows user to find and inexact (fuzzy) repetitions in the domcument and take stock of them.
+Duplicate finder is a tool allowing finding and tracking inexact (fuzzy) repetitions in documents.
 
 Quick Guide
 -----------
