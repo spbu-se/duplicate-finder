@@ -32,10 +32,11 @@ under the [`tool`](https://github.com/spbu-se/duplicate-finder/tool) subfolder.
 Examples
 ========
 
-| Project | Document    | Source (plain text)           | Clean heat map                                | Heat map with duplicates marked                | (Near) Duplicates         |
-|---------|-------------|-------------------------------|-----------------------------------------------|------------------------------------------------|---------------------------|
-| GIMP    | User Manual | [1574K](GIMP/user_guide.pxml) | [>>](GIMP/clean-heat-map/densitybrowser.html) | [>>](GIMP/marked-heat-map/densitybrowser.html) | [17](GIMP/near_dups.html) |
+| Project         | Document      | Source (plain text)                  | Clean heat map                                      | Heat map with duplicates marked                      | (Near) Duplicates               |
+|-----------------|---------------|--------------------------------------|-----------------------------------------------------|------------------------------------------------------|---------------------------------|
+| GIMP            | User Manual   | [1574K](GIMP/user_guide.pxml)        | [>>](GIMP/clean-heat-map/densitybrowser.html)       | [>>](GIMP/marked-heat-map/densitybrowser.html)       | [17](GIMP/near_dups.html)       |
 | Python Requests | API Reference | [36K](PyRequests/api_reference.pxml) | [>>](PyRequests/clean-heat-map/densitybrowser.html) | [>>](PyRequests/marked-heat-map/densitybrowser.html) | [11](PyRequests/near_dups.html) |
+
 
 System Requirements
 ===================
