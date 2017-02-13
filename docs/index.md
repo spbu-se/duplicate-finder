@@ -27,7 +27,7 @@ Source Code
 ===========
 
 Source code is available in [Git repository](https://github.com/spbu-se/duplicate-finder),
-under the [`tool`](https://github.com/spbu-se/duplicate-finder/tool) subfolder.
+under the [`tool`](https://github.com/spbu-se/duplicate-finder/tree/master/tool) subfolder.
 
 Examples
 ========
