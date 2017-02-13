@@ -31,7 +31,7 @@ When running the tool next time, known repetitions will not affect heat map, so 
 ### Duplicate Report
 
 Using a checkbox, you can select to display already marked duplicates
-instead of building heat map, and then export report with File manu if needed.
+instead of building heat map, and then export report with File menu if needed.
 
 Source Code
 ===========
