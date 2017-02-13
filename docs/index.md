@@ -23,12 +23,18 @@ or useless ones for future analysis. Then (s)he can save document with repetitio
 
 When running the tool next time, known repetitions will not affect heat map, so heat map will get cleaner and cleaner.
 
+Source Code
+===========
+
+Source code is available in [Git repository](https://github.com/spbu-se/duplicate-finder),
+under the [`tool`](https://github.com/spbu-se/duplicate-finder/tool) subfolder.
+
 Examples
 ========
 
-| Project | Document    | Source (plain text) | Clean heat map | Heat map with duplicates marked | (Near) Duplicates |
-|---------|-------------|---------------------|----------------|---------------------------------|-------------------|
-| GIMP    | User Manual | >>                    >>               >>                                >>
+| Project | Document    | Source (plain text)           | Clean heat map                                | Heat map with duplicates marked                | (Near) Duplicates         |
+|---------|-------------|-------------------------------|-----------------------------------------------|------------------------------------------------|---------------------------|
+| GIMP    | User Manual | [1574K](GIMP/user_guide.pxml) | [>>](GIMP/clean-heat-map/densitybrowser.html) | [>>](GIMP/marked-heat-map/densitybrowser.html) | [17](GIMP/near_dups.html) |
 
 System Requirements
 ===================
