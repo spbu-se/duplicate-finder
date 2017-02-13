@@ -12,7 +12,7 @@ Quick Guide
 You can choose:
 
 * arbitrary XML (HTML, DocBook) or plain text document to analyze;
-* minimal and maximal repetition sizes (in words) the tool should consiider;
+* minimal and maximal repetition sizes (in words) the tool should consider;
 * minimal repetiotion number the tool should consider.
 
 Then you can get a visualized document reuse map in the browser (brief heat map in the right panel and
