@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+        </style>
+        <script>
+        function selctionfuzzysearch(evt) {
+          var seltext = window.getSelection().toString();
+          var minsim = window.prompt("Similarity threshold", "0.5");
+          // alert([minsim, seltext]);
+          var nloc = "http://127.0.0.1:49999/fuzzysearch?minsim=" + encodeURIComponent(minsim) +
+            "&text=" + encodeURIComponent(seltext);
+          window.location = nloc;
+        }
+        document.addEventListener("keypress", selctionfuzzysearch, false);
+        </script>
+
+        </head>
+        <body style="overflow-x: hidden;">
+        File # 1: D:\vcswf\GitHub\duplicate-finder\docs\PyRequests\api_reference_marked.pxml<br/>
+ <span id="co-1-0" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">&lt;?xml version="1.0" encoding="utf-8" ?&gt; class BaseAdapter(object):<br/>
+The Base Transport Adapter<br/>
+class HTTPAdapter(BaseAdapter):<br/>
+The built-in HTTP Adapter for urllib3.<br/>
+Provides a general-case interface for Requests sessions to contact HTTP and<br/>
+HTTPS urls by implementing the Transport Adapter interface. This class will<br/>
+usually be created by the :class:`Session  &amp;amp; lt;Session &amp;amp; gt;` class under the<br/>
+covers.<br/>
+</span> <span id="co-1-421" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- 2acebf81-4457-4ce1-a425-ef5192006366 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-477" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">:param </span> <span id="co-1-484" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">pool_connections: </span> <span id="co-1-502" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">The number of urllib3 connection pools to cache.<br/>
+:param </span> <span id="co-1-558" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">pool_maxsize: </span> <span id="co-1-572" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">The maximum number of connections to save in the pool.</span> <span id="co-1-626" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; 2acebf81-4457-4ce1-a425-ef5192006366 --&gt;</span> <span id="co-1-682" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"><br/>
+:param </span> <span id="co-1-690" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">int max_retries: The maximum number of retries each connection<br/>
+should attempt. Note, this applies only to failed DNS lookups, socket<br/>
+connections and connection timeouts, never to requests where data has<br/>
+made it to the server. By default, Requests does not retry failed<br/>
+connections. If you need granular control over the conditions under<br/>
+which we retry a request, import urllib3's ``Retry`` class and pass<br/>
+that instead.<br/>
+:param pool_block: Whether the connection pool should block for connections.<br/>
+</span> <span id="co-1-1187" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">Usage::<br/>
+</span> <span id="co-1-1196" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 100%; GRP Power: 50% = 2 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-1220" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"> import requests<br/>
+</span> <span id="co-1-1237" style="background-color: rgb(255, 64, 64);" title="Clones coverage: 100%; GRP Power: 75% = 3 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-1261" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4"> s = requests.Session()<br/>
+</span> <span id="co-1-1285" style="background-color: rgb(255, 64, 64);" title="Clones coverage: 100%; GRP Power: 75% = 3 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-1309" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4"></span> <span id="co-1-1310" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">a = requests.adapters.HTTPAdapter(max_retries=3)<br/>
+</span> <span id="co-1-1359" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 100%; GRP Power: 25% = 1 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-1383" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4"> s.mount('http://', a)<br/>
+def init_poolmanager(self, connections, maxsize, block=DEFAULT_POOLBLOCK, **pool_kwargs):<br/>
+Initializes a urllib3 PoolManager.<br/>
+</span> <span id="co-1-1533" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 10%; GRP Power: 0% = 0 / 4">&lt;!-- 6285e141-3fc3-4214-91f8-df15673cd165 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-1589" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 10%; GRP Power: -25% = -1 / 4">This method should not be called from user code, and is only<br/>
+exposed for use when subclassing the<br/>
+:class:`HTTPAdapter  &amp;amp; lt;requests.adapters.HTTPAdapter &amp;amp; gt;`.</span> <span id="co-1-1754" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 10%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; 6285e141-3fc3-4214-91f8-df15673cd165 --&gt;</span> <span id="co-1-1810" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 10%; GRP Power: 25% = 1 / 4"></span> <span id="co-1-1812" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- 2acebf81-4457-4ce1-a425-ef5192006366 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-1868" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">:param </span> <span id="co-1-1875" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">connections: </span> <span id="co-1-1888" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">The number of urllib3 connection pools to cache.<br/>
+:param </span> <span id="co-1-1944" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">maxsize: </span> <span id="co-1-1953" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">The maximum number of connections to save in the pool.</span> <span id="co-1-2007" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; 2acebf81-4457-4ce1-a425-ef5192006366 --&gt;</span> <span id="co-1-2063" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"><br/>
+:param </span> <span id="co-1-2071" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">block: Block when no free connections are available.<br/>
+:param pool_kwargs: </span> <span id="co-1-2144" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">Extra keyword arguments used to </span> <span id="co-1-2176" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">initialize the Pool Manager.<br/>
+def proxy_manager_for(self, proxy, **proxy_kwargs):<br/>
+Return urllib3 ProxyManager for the given proxy.<br/>
+</span> <span id="co-1-2308" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 10%; GRP Power: 0% = 0 / 4">&lt;!-- 6285e141-3fc3-4214-91f8-df15673cd165 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-2364" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 10%; GRP Power: -25% = -1 / 4">This method should not be called from user code, and is only<br/>
+exposed for use when subclassing the<br/>
+:class:`HTTPAdapter  &amp;amp; lt;requests.adapters.HTTPAdapter &amp;amp; gt;`.</span> <span id="co-1-2529" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 10%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; 6285e141-3fc3-4214-91f8-df15673cd165 --&gt;</span> <span id="co-1-2585" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4"></span> <span id="co-1-2587" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">:param </span> <span id="co-1-2594" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">proxy: The proxy to return a urllib3 ProxyManager for.<br/>
+:param proxy_kwargs: </span> <span id="co-1-2670" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">Extra keyword arguments used to </span> <span id="co-1-2702" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">configure the Proxy Manager.<br/>
+:returns: ProxyManager<br/>
+def cert_verify(self, conn, url, verify, cert):<br/>
+Verify a SSL certificate. </span> <span id="co-1-2829" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 10%; GRP Power: 0% = 0 / 4">&lt;!-- 6285e141-3fc3-4214-91f8-df15673cd165 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-2885" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 10%; GRP Power: -25% = -1 / 4">This method should not be called from user<br/>
+code, and is only exposed for use when subclassing the<br/>
+:class:`HTTPAdapter  &amp;amp; lt;requests.adapters.HTTPAdapter &amp;amp; gt;`.</span> <span id="co-1-3050" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 10%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; 6285e141-3fc3-4214-91f8-df15673cd165 --&gt;</span> <span id="co-1-3106" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4"></span> <span id="co-1-3108" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">:param </span> <span id="co-1-3115" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">conn: The urllib3 connection object associated with the cert.<br/>
+:param url: The requested URL.<br/>
+:param verify: Whether we should actually verify the certificate.<br/>
+:param cert: The SSL certificate to verify.<br/>
+def build_response(self, req, resp):<br/>
+Builds a :class:`Response  &amp;amp; lt;requests.Response &amp;amp; gt;` object from a urllib3<br/>
+response. </span> <span id="co-1-3449" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 17%; GRP Power: 0% = 0 / 4">&lt;!-- 367d1bc2-8988-4154-91bf-f4cbf2a72923 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-3505" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 17%; GRP Power: -25% = -1 / 4">This should not be called from user code, and is only exposed<br/>
+for use when subclassing the<br/>
+:class:`HTTPAdapter  &amp;amp; lt;requests.adapters.HTTPAdapter &amp;amp; gt;`</span> <span id="co-1-3662" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">&lt;!-- </span> <span id="co-1-3667" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 17%; GRP Power: 0% = 0 / 4">ACCEPT &gt;=&gt; 367d1bc2-8988-4154-91bf-f4cbf2a72923 --&gt;</span> <span id="co-1-3718" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 17%; GRP Power: 25% = 1 / 4"><br/>
+:param </span> <span id="co-1-3727" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">req: </span> <span id="co-1-3732" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 10%; GRP Power: 25% = 1 / 4">The :class:`PreparedRequest  &amp;amp; lt;PreparedRequest &amp;amp; gt;` </span> <span id="co-1-3793" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">used to generate the response.<br/>
+:param resp: The urllib3 response object.<br/>
+def get_connection(self, url, proxies=None):<br/>
+Returns a urllib3 connection for the given </span> <span id="co-1-3955" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">URL. </span> <span id="co-1-3960" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 17%; GRP Power: 0% = 0 / 4">&lt;!-- 367d1bc2-8988-4154-91bf-f4cbf2a72923 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-4016" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 17%; GRP Power: -25% = -1 / 4">This should not be<br/>
+called from user code, and is only exposed for use when subclassing the<br/>
+:class:`HTTPAdapter  &amp;amp; lt;requests.adapters.HTTPAdapter &amp;amp; gt;`</span> <span id="co-1-4173" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 14%; GRP Power: -25% = -1 / 4">.</span> <span id="co-1-4174" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 14%; GRP Power: 0% = 0 / 4">&lt;!-- </span> <span id="co-1-4179" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 17%; GRP Power: 0% = 0 / 4">ACCEPT &gt;=&gt; 367d1bc2-8988-4154-91bf-f4cbf2a72923 --&gt;</span> <span id="co-1-4230" style="background-color: rgb(255, 64, 64);" title="Clones coverage: 17%; GRP Power: 75% = 3 / 4"><br/>
+:param </span> <span id="co-1-4239" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">url: The URL to connect to.<br/>
+:param proxies: (optional) A Requests-style dictionary of proxies used on this request.<br/>
+def close(self):<br/>
+Disposes of any internal state.<br/>
+Currently, this just closes the PoolManager, which closes pooled<br/>
+connections.<br/>
+def request_url(self, request, proxies):<br/>
+Obtain the url to use when making the final request.<br/>
+If the message is being sent through a HTTP proxy, the full URL has to<br/>
+be used. Otherwise, we should only use the path portion of the </span> <span id="co-1-4714" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">URL.<br/>
+</span> <span id="co-1-4720" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 17%; GRP Power: 0% = 0 / 4">&lt;!-- 367d1bc2-8988-4154-91bf-f4cbf2a72923 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-4776" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 17%; GRP Power: -25% = -1 / 4">This should not be called from user code, and is only exposed for use<br/>
+when subclassing the<br/>
+:class:`HTTPAdapter  &amp;amp; lt;requests.adapters.HTTPAdapter &amp;amp; gt;`</span> <span id="co-1-4933" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 14%; GRP Power: -25% = -1 / 4">.</span> <span id="co-1-4934" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 14%; GRP Power: 0% = 0 / 4">&lt;!-- </span> <span id="co-1-4939" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 17%; GRP Power: 0% = 0 / 4">ACCEPT &gt;=&gt; 367d1bc2-8988-4154-91bf-f4cbf2a72923 --&gt;</span> <span id="co-1-4990" style="background-color: rgb(255, 0, 0);" title="Clones coverage: 17%; GRP Power: 100% = 4 / 4"><br/>
+:param </span> <span id="co-1-4999" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">request: </span> <span id="co-1-5008" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4">The :class:`PreparedRequest  &amp;amp; lt;PreparedRequest &amp;amp; gt;` </span> <span id="co-1-5069" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">being sent.<br/>
+:param proxies: A dictionary of schemes to proxy URLs.<br/>
+def add_headers(self, request, **kwargs):<br/>
+Add any headers needed by the connection. As of v2.0 this does<br/>
+nothing by default, but is left for overriding by users that subclass<br/>
+the :class:`HTTPAdapter  &amp;amp; lt;requests.adapters.HTTPAdapter &amp;amp; gt;`.<br/>
+</span> <span id="co-1-5385" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 17%; GRP Power: 0% = 0 / 4">&lt;!-- 367d1bc2-8988-4154-91bf-f4cbf2a72923 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-5441" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 17%; GRP Power: -25% = -1 / 4">This should not be called from user code, and is only exposed for use<br/>
+when subclassing the<br/>
+:class:`HTTPAdapter  &amp;amp; lt;requests.adapters.HTTPAdapter &amp;amp; gt;`</span> <span id="co-1-5598" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 14%; GRP Power: -25% = -1 / 4">.</span> <span id="co-1-5599" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 14%; GRP Power: 0% = 0 / 4">&lt;!-- </span> <span id="co-1-5604" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 17%; GRP Power: 0% = 0 / 4">ACCEPT &gt;=&gt; 367d1bc2-8988-4154-91bf-f4cbf2a72923 --&gt;</span> <span id="co-1-5655" style="background-color: rgb(255, 64, 64);" title="Clones coverage: 17%; GRP Power: 75% = 3 / 4"><br/>
+:param </span> <span id="co-1-5664" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">request: </span> <span id="co-1-5673" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4">The :class:`PreparedRequest  &amp;amp; lt;PreparedRequest &amp;amp; gt;` </span> <span id="co-1-5734" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">to add headers to.<br/>
+:param kwargs: The keyword arguments from the call to send().<br/>
+def proxy_headers(self, proxy):<br/>
+Returns a dictionary of the headers to add to any request sent<br/>
+through a proxy. This works with urllib3 magic to ensure that they are<br/>
+correctly sent to the proxy, rather than in a tunnelled request if<br/>
+CONNECT is being used.<br/>
+</span> <span id="co-1-6073" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 17%; GRP Power: 0% = 0 / 4">&lt;!-- 367d1bc2-8988-4154-91bf-f4cbf2a72923 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-6129" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 17%; GRP Power: -25% = -1 / 4">This should not be called from user code, and is only exposed for use<br/>
+when subclassing the<br/>
+:class:`HTTPAdapter  &amp;amp; lt;requests.adapters.HTTPAdapter &amp;amp; gt;`</span> <span id="co-1-6286" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 14%; GRP Power: -25% = -1 / 4">.</span> <span id="co-1-6287" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 14%; GRP Power: 0% = 0 / 4">&lt;!-- </span> <span id="co-1-6292" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 17%; GRP Power: 0% = 0 / 4">ACCEPT &gt;=&gt; 367d1bc2-8988-4154-91bf-f4cbf2a72923 --&gt;</span> <span id="co-1-6343" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 17%; GRP Power: 50% = 2 / 4"><br/>
+:param </span> <span id="co-1-6352" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">proxies: The url of the proxy being used for this request.<br/>
+:param kwargs: Optional additional keyword arguments.<br/>
+requests.api<br/>
+~~~~~~~~~~~~<br/>
+This module implements the Requests API.<br/>
+:copyright: (c) 2012 by Kenneth Reitz.<br/>
+:license: Apache2, see LICENSE for more details.<br/>
+def request(method, url, **kwargs):<br/>
+Constructs and sends </span> <span id="co-1-6681" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 10%; GRP Power: 25% = 1 / 4">a :class:`Request  &amp;amp; lt;Request &amp;amp; gt;`</span> <span id="co-1-6723" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">.<br/>
+</span> <span id="co-1-6725" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">Returns :class:`Response  &amp;amp; lt;Response &amp;amp; gt;` object.<br/>
+</span> <span id="co-1-6785" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- ccaca5c7-c16d-4069-bdba-511db1a95fa8 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-6841" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">:param method: method for the new :class:`Request` object.<br/>
+:param url: URL for the new :class:`Request` object.<br/>
+:param params: (optional) Dictionary or bytes to be sent in the query string for the :class:`Request`.<br/>
+:</span> <span id="co-1-7057" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 10%; GRP Power: -25% = -1 / 4">param data: (optional) Dictionary, bytes, or file-like object to send in the body of the :class:`Request`.<br/>
+:param json: (optional) json </span> <span id="co-1-7193" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">data to send in the body of the :class:`Request`.<br/>
+:param headers: (optional) Dictionary of HTTP Headers to send with the :class:`Request`.<br/>
+:param cookies: (optional) Dict or CookieJar object to send with the :class:`Request`.<br/>
+:param files: (optional) Dictionary of ``'</span> <span id="co-1-7461" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">name': file-like-objects`` (or ``{'name': ('filename', fileobj)}``) </span> <span id="co-1-7529" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">for multipart encoding upload.<br/>
+:param auth: (optional) Auth tuple to enable Basic/Digest/Custom HTTP Auth.<br/>
+:param timeout: (optional) How long to wait for the server to send data<br/>
+before giving up, as a float, or a (`connect timeout, read timeout<br/>
+ &amp;amp; lt;user/advanced.html#timeouts &amp;amp; gt;`_) tuple.<br/>
+:type timeout: float or tuple<br/>
+:param allow_redirects: (optional) </span> <span id="co-1-7894" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">Boolean. Set to True if POST/PUT/DELETE redirect following is allowed.<br/>
+:</span> <span id="co-1-7966" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">type allow_redirects: bool<br/>
+:param proxies: (optional) Dictionary mapping protocol to the URL of the proxy.<br/>
+:param verify: (optional) if ``True``, the SSL cert will be verified. A CA_BUNDLE path can also be provided.<br/>
+:param </span> <span id="co-1-8189" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">stream: (optional) if ``False``, the response content will be immediately downloaded.</span> <span id="co-1-8274" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; ccaca5c7-c16d-4069-bdba-511db1a95fa8 --&gt;</span> <span id="co-1-8330" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"><br/>
+:</span> <span id="co-1-8332" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 7%; GRP Power: 50% = 2 / 4">param </span> <span id="co-1-8338" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">cert: (optional) if String, path to ssl client cert file (.pem). If Tuple, ('cert', 'key') pair.<br/>
+</span> <span id="co-1-8436" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 10%; GRP Power: 0% = 0 / 4">&lt;!-- bba91b68-7842-4c91-a085-082f2f36bf17 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-8492" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 10%; GRP Power: -25% = -1 / 4">Usage::<br/>
+</span> <span id="co-1-8501" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 100%; GRP Power: -25% = -1 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-8525" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 10%; GRP Power: -25% = -1 / 4"> import requests<br/>
+</span> <span id="co-1-8542" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 100%; GRP Power: -25% = -1 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-8566" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 10%; GRP Power: -25% = -1 / 4"> req = requests.request('GET', 'http://httpbin.org/get')</span> <span id="co-1-8622" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 10%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; bba91b68-7842-4c91-a085-082f2f36bf17 --&gt;</span> <span id="co-1-8678" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 10%; GRP Power: 25% = 1 / 4"></span> <span id="co-1-8679" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4">&amp;amp;</span> <span id="co-1-8684" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">lt;Response [200] &amp;amp; gt;<br/>
+</span> <span id="co-1-8711" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- a7eee1d9-105a-4e08-8c54-2fa1bb5e2908 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-8767" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">def get(url, **kwargs):<br/>
+Sends a GET request. Returns :class:`Response` object.<br/>
+:param url: URL for the new :class:`Request` object.<br/>
+:param \*\*kwargs: Optional arguments that ``request`` takes.<br/>
+def options(url, **kwargs):<br/>
+Sends a OPTIONS request. Returns :class:`Response` object.<br/>
+:param url: URL for the new :class:`Request` object.<br/>
+:param \*\*kwargs: Optional arguments that ``request`` takes.<br/>
+def head(url, **kwargs):<br/>
+Sends a HEAD request. Returns :class:`Response` object.<br/>
+:param url: URL for the new :class:`Request` object.<br/>
+:param \*\*kwargs: Optional arguments that ``request`` takes.<br/>
+def post(url, data=None, json=None, **kwargs):<br/>
+Sends a POST request. Returns :class:`Response` object.<br/>
+:param url: URL for the new :class:`Request` object.<br/>
+:</span> <span id="co-1-9523" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 10%; GRP Power: -25% = -1 / 4">param data: (optional) Dictionary, bytes, or file-like object to send in the body of the :class:`Request`.<br/>
+:param json: (optional) json </span> <span id="co-1-9659" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">data to send in the body of the :class:`Request`.<br/>
+:param \*\*kwargs: Optional arguments that ``request`` takes.<br/>
+def put(</span> <span id="co-1-9780" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 14%; GRP Power: -25% = -1 / 4">url, data=None, **kwargs):<br/>
+Sends a </span> <span id="co-1-9815" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">PUT request. Returns :class:`Response` object.<br/>
+:param url: URL for the new :class:`Request` object.<br/>
+:param data: (optional) Dictionary, bytes, or file-like object to send in the body of the :class:`Request`.<br/>
+:param \*\*kwargs: Optional arguments that ``request`` takes.<br/>
+def patch(</span> <span id="co-1-10097" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 14%; GRP Power: -25% = -1 / 4">url, data=None, **kwargs):<br/>
+Sends a </span> <span id="co-1-10132" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">PATCH request. Returns :class:`Response` object.<br/>
+:param url: URL for the new :class:`Request` object.<br/>
+:param data: (optional) Dictionary, bytes, or file-like object to send in the body of the :class:`Request`.<br/>
+:param \*\*kwargs: Optional arguments that ``request`` takes.<br/>
+def delete(url, **kwargs):<br/>
+Sends a DELETE request. Returns :class:`Response` object.<br/>
+:param url: URL for the new :class:`Request` object.<br/>
+:param \*\*kwargs: Optional arguments that ``request`` takes.</span> <span id="co-1-10606" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; a7eee1d9-105a-4e08-8c54-2fa1bb5e2908 --&gt;</span> <span id="co-1-10662" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"></span> <span id="co-1-10664" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">requests.auth<br/>
+~~~~~~~~~~~~~<br/>
+This module contains the authentication handlers for Requests.<br/>
+class AuthBase(object):<br/>
+Base class that all auth implementations derive from<br/>
+class HTTPBasicAuth(AuthBase):<br/>
+Attaches HTTP Basic Authentication to the given Request object.<br/>
+class HTTPProxyAuth(HTTPBasicAuth):<br/>
+Attaches HTTP Proxy Authentication to a given Request object.<br/>
+def handle_redirect(self, r, **kwargs):<br/>
+Reset num_401_calls counter on redirects.<br/>
+def handle_401(self, r, **kwargs):<br/>
+Takes the given response and tries digest-auth, if needed.<br/>
+certs.py<br/>
+~~~~~~~~<br/>
+This module returns the preferred default CA certificate bundle.<br/>
+If you are packaging Requests, e.g., for a Linux distribution or a managed<br/>
+environment, you can change the definition of where() to return a separately<br/>
+packaged CA bundle.<br/>
+def where():<br/>
+Return the preferred certificate bundle.<br/>
+class MockRequest(object):<br/>
+Wraps a `requests.Request` to mimic a `urllib2.Request`.<br/>
+The code in `cookielib.CookieJar` expects this interface in order to correctly<br/>
+manage cookie policies, i.e., determine whether a cookie can be set, given the<br/>
+domains of the request and the cookie.<br/>
+The original request object is read-only. The client is responsible for collecting<br/>
+the new headers via `get_new_headers()` and interpreting them appropriately. You<br/>
+probably want `get_cookie_header`, defined below.<br/>
+def add_header(self, key, val):<br/>
+cookielib has no legitimate use for this method; add it back if you find one.<br/>
+class MockResponse(object):<br/>
+Wraps a `httplib.HTTPMessage` to mimic a `urllib.addinfourl`.<br/>
+...what? Basically, expose the parsed HTTP headers from the server response<br/>
+the way `cookielib` expects to see them.<br/>
+def __init__(self, headers):<br/>
+Make a MockResponse for `cookielib` to read.<br/>
+:param headers: a httplib.HTTPMessage or analogous carrying the headers<br/>
+def extract_cookies_to_jar(jar, request, response):<br/>
+Extract the cookies from the response into a CookieJar.<br/>
+:param jar: cookielib.CookieJar (not necessarily a RequestsCookieJar)<br/>
+:param request: our own requests.Request object<br/>
+:param response: urllib3.HTTPResponse object<br/>
+def get_cookie_header(jar, request):<br/>
+Produce an appropriate Cookie header string to be sent with `request`, or None.<br/>
+def remove_cookie_by_name(cookiejar, name, domain=None, path=None):<br/>
+Unsets a cookie by name, by default over all domains and paths.<br/>
+Wraps CookieJar.clear(), is O(n).<br/>
+class CookieConflictError(RuntimeError):<br/>
+There are two cookies that meet the criteria specified in the cookie jar.<br/>
+Use .get and .set and include domain and path args in order to be more specific.<br/>
+class RequestsCookieJar(cookielib.CookieJar, collections.MutableMapping):<br/>
+Compatibility class; is a cookielib.CookieJar, but exposes a dict interface.<br/>
+This is the CookieJar we create by default for requests and sessions that<br/>
+don't specify one, since some clients may expect response.cookies and<br/>
+session.cookies to support dict operations.<br/>
+Don't use the dict interface internally; it's just for compatibility with<br/>
+with external client code. All `requests` code should work out of the box<br/>
+with externally provided instances of CookieJar, e.g., LWPCookieJar and<br/>
+FileCookieJar.<br/>
+Caution: dictionary operations that are normally O(1) may be O(n).<br/>
+</span> <span id="co-1-13888" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 10%; GRP Power: 0% = 0 / 4">&lt;!-- 0fb90da6-fdf2-4cf0-b872-fb0682640196 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-13944" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 10%; GRP Power: -25% = -1 / 4">Unlike a </span> <span id="co-1-13953" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">regular CookieJar, this class is pickleable.</span> <span id="co-1-13997" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; 0fb90da6-fdf2-4cf0-b872-fb0682640196 --</span> <span id="co-1-14052" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&gt;</span> <span id="co-1-14053" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"></span> <span id="co-1-14055" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- d2d1b740-ec55-4639-b80b-bb83e242e87d &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-14111" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">def get(self, </span> <span id="co-1-14125" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">name, default=None, domain=None, path=None):<br/>
+Dict-like get() </span> <span id="co-1-14186" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">that also supports optional domain and path args in<br/>
+order to resolve naming collisions from using one cookie jar over<br/>
+multiple domains.</span> <span id="co-1-14321" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4"></span> <span id="co-1-14322" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">Caution: operation is O(n), not O(1).</span> <span id="co-1-14359" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; d2d1b740-ec55-4639-b80b-bb83e242e87d --&gt;</span> <span id="co-1-14415" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 7%; GRP Power: 50% = 2 / 4"></span> <span id="co-1-14416" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"></span> <span id="co-1-14417" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- d2d1b740-ec55-4639-b80b-bb83e242e87d &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-14473" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">def </span> <span id="co-1-14477" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">set(self, name, value, **kwargs):<br/>
+Dict-like set() </span> <span id="co-1-14527" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">that also supports optional domain and path args in<br/>
+order to resolve naming collisions from using one cookie jar over<br/>
+multiple domains.</span> <span id="co-1-14662" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4"></span> <span id="co-1-14663" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; d2d1b740-ec55-4639-b80b-bb83e242e87d --&gt;</span> <span id="co-1-14719" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"></span> <span id="co-1-14720" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">def iterkeys(self):<br/>
+Dict-like iterkeys() </span> <span id="co-1-14761" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 10%; GRP Power: 25% = 1 / 4">that returns an iterator </span> <span id="co-1-14786" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4">of </span> <span id="co-1-14789" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">names </span> <span id="co-1-14795" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 14%; GRP Power: 50% = 2 / 4">of cookies from the jar.<br/>
+See </span> <span id="co-1-14824" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">itervalues() and iteritems().<br/>
+def keys(self):<br/>
+Dict-like keys() </span> <span id="co-1-14888" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 10%; GRP Power: 25% = 1 / 4">that returns a list </span> <span id="co-1-14908" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4">of </span> <span id="co-1-14911" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">names </span> <span id="co-1-14917" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 14%; GRP Power: 50% = 2 / 4">of cookies from the jar.<br/>
+See </span> <span id="co-1-14946" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">values() and items().<br/>
+def itervalues(self):<br/>
+Dict-like itervalues() </span> <span id="co-1-15014" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 10%; GRP Power: 25% = 1 / 4">that returns an iterator </span> <span id="co-1-15039" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4">of </span> <span id="co-1-15042" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">values </span> <span id="co-1-15049" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 14%; GRP Power: 50% = 2 / 4">of cookies </span> <span id="co-1-15060" style="background-color: rgb(255, 64, 64);" title="Clones coverage: 14%; GRP Power: 75% = 3 / 4">from the jar.<br/>
+See </span> <span id="co-1-15078" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">iterkeys() and </span> <span id="co-1-15093" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">iteritems().<br/>
+def values(self):<br/>
+Dict-like values() </span> <span id="co-1-15144" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 10%; GRP Power: 25% = 1 / 4">that returns a list </span> <span id="co-1-15164" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4">of </span> <span id="co-1-15167" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">values </span> <span id="co-1-15174" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 14%; GRP Power: 50% = 2 / 4">of cookies </span> <span id="co-1-15185" style="background-color: rgb(255, 64, 64);" title="Clones coverage: 14%; GRP Power: 75% = 3 / 4">from the jar.<br/>
+See </span> <span id="co-1-15203" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">keys() and </span> <span id="co-1-15214" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">items().<br/>
+def iteritems(self):<br/>
+Dict-like iteritems() </span> <span id="co-1-15267" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 10%; GRP Power: 25% = 1 / 4">that returns an iterator </span> <span id="co-1-15292" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4">of </span> <span id="co-1-15295" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">name-value tuples </span> <span id="co-1-15313" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 7%; GRP Power: 50% = 2 / 4">from the jar.<br/>
+See </span> <span id="co-1-15331" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">iterkeys() and </span> <span id="co-1-15346" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">itervalues().<br/>
+def items(self):<br/>
+Dict-like items() </span> <span id="co-1-15396" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 10%; GRP Power: 25% = 1 / 4">that returns a list </span> <span id="co-1-15416" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4">of </span> <span id="co-1-15419" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">name-value tuples </span> <span id="co-1-15437" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 7%; GRP Power: 50% = 2 / 4">from the jar.<br/>
+See </span> <span id="co-1-15455" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">keys() and </span> <span id="co-1-15466" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">values(). Allows client-code to call "dict(RequestsCookieJar)<br/>
+and get a vanilla python dict of key value pairs.<br/>
+def list_domains(</span> <span id="co-1-15596" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">self):<br/>
+Utility method to list all the </span> <span id="co-1-15634" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">domains in the jar.<br/>
+def list_paths(</span> <span id="co-1-15670" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">self):<br/>
+Utility method to list all the </span> <span id="co-1-15708" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">paths in the jar.<br/>
+def multiple_domains(self):<br/>
+Returns True if there are multiple domains in the jar.<br/>
+Returns False otherwise.<br/>
+def get_dict(self, domain=None, path=None):<br/>
+Takes as an argument an optional domain and path and returns a plain old<br/>
+Python dict of name-value pairs of cookies that meet the requirements.<br/>
+</span> <span id="co-1-16025" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- 0ec8ec4c-76d6-4b2a-9444-be61541835bf &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-16081" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">def </span> <span id="co-1-16085" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">__getitem__(self, name):<br/>
+Dict-like __getitem__() </span> <span id="co-1-16134" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">for compatibility with client code. Throws exception<br/>
+if there </span> <span id="co-1-16196" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">are more than one cookie with name. </span> <span id="co-1-16232" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">In that case, use the more<br/>
+explicit </span> <span id="co-1-16268" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">get() method instead. </span> <span id="co-1-16290" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">Caution: operation is O(n), not O(1).</span> <span id="co-1-16327" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; 0ec8ec4c-76d6-4b2a-9444-be61541835bf --&gt;</span> <span id="co-1-16383" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"></span> <span id="co-1-16385" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- 0ec8ec4c-76d6-4b2a-9444-be61541835bf &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-16441" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">def </span> <span id="co-1-16445" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">__setitem__(self, name, value):<br/>
+Dict-like __setitem__ </span> <span id="co-1-16499" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">for compatibility with client code. Throws exception<br/>
+if there </span> <span id="co-1-16561" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">is already a cookie of that name in the jar. </span> <span id="co-1-16606" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">In that case, use the more<br/>
+explicit </span> <span id="co-1-16642" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">set() method instead.</span> <span id="co-1-16663" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; 0ec8ec4c-76d6-4b2a-9444-be61541835bf --&gt;</span> <span id="co-1-16719" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"></span> <span id="co-1-16721" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">def __delitem__(self, name):<br/>
+Deletes a cookie given a name. Wraps cookielib.CookieJar's remove_cookie_by_name().<br/>
+def update(self, other):<br/>
+Updates this jar with cookies from another CookieJar or dict-like<br/>
+def __getstate__(self):<br/>
+</span> <span id="co-1-16951" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 10%; GRP Power: 0% = 0 / 4">&lt;!-- 0fb90da6-fdf2-4cf0-b872-fb0682640196 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-17007" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 10%; GRP Power: -25% = -1 / 4">Unlike a </span> <span id="co-1-17016" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">normal CookieJar, this class is pickleable.</span> <span id="co-1-17059" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; 0fb90da6-fdf2-4cf0-b872-fb0682640196 --&gt;</span> <span id="co-1-17115" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"><br/>
+def </span> <span id="co-1-17121" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">__setstate__(self, state):<br/>
+</span> <span id="co-1-17148" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 10%; GRP Power: 0% = 0 / 4">&lt;!-- 0fb90da6-fdf2-4cf0-b872-fb0682640196 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-17204" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 10%; GRP Power: -25% = -1 / 4">Unlike a </span> <span id="co-1-17213" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">normal CookieJar, this class is pickleable.</span> <span id="co-1-17256" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; 0fb90da6-fdf2-4cf0-b872-fb0682640196 --&gt;</span> <span id="co-1-17312" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"><br/>
+def </span> <span id="co-1-17318" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">copy(self):<br/>
+Return a copy of this RequestsCookieJar.<br/>
+def create_cookie(name, value, **kwargs):<br/>
+Make a cookie from underspecified parameters.<br/>
+By default, the pair of `name` and `value` will be set for the domain ''<br/>
+and sent on every request (this is sometimes called a "supercookie").<br/>
+def morsel_to_cookie(morsel):<br/>
+Convert a Morsel object into a Cookie containing the one k/v pair.<br/>
+def cookiejar_from_dict(cookie_dict, cookiejar=None, overwrite=True):<br/>
+</span> <span id="co-1-17773" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">Returns a CookieJar from a key/value dictionary.<br/>
+:</span> <span id="co-1-17824" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 7%; GRP Power: 50% = 2 / 4">param </span> <span id="co-1-17830" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">cookie_dict: Dict of key/values to insert into CookieJar.<br/>
+</span> <span id="co-1-17888" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">:param cookiejar: (optional) A cookiejar </span> <span id="co-1-17929" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">to add the cookies to.<br/>
+:param </span> <span id="co-1-17959" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">overwrite: (optional) If False, will not replace cookies<br/>
+already in the jar with new ones.<br/>
+def merge_cookies(cookiejar, cookies):<br/>
+Add cookies to cookiejar and returns a merged CookieJar.<br/>
+:param cookiejar: CookieJar object </span> <span id="co-1-18183" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">to add the cookies to.<br/>
+:</span> <span id="co-1-18207" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 7%; GRP Power: 50% = 2 / 4">param </span> <span id="co-1-18213" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">cookies: Dictionary or CookieJar </span> <span id="co-1-18246" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">object to be added.<br/>
+requests.exceptions<br/>
+~~~~~~~~~~~~~~~~~~~<br/>
+This module contains the set of Requests' exceptions.<br/>
+class RequestException(IOError):<br/>
+There was an ambiguous exception that occurred while handling your<br/>
+request.<br/>
+def __init__(self, *args, **kwargs):<br/>
+Initialize RequestException with `request` and `response` objects.<br/>
+class HTTPError(RequestException):<br/>
+An HTTP error occurred.<br/>
+class ConnectionError(RequestException):<br/>
+A Connection error occurred.<br/>
+class ProxyError(ConnectionError):<br/>
+A proxy error occurred.<br/>
+class SSLError(ConnectionError):<br/>
+An SSL error occurred.<br/>
+class Timeout(RequestException):<br/>
+The request timed out.<br/>
+Catching this error will catch both<br/>
+:exc:`~requests.exceptions.ConnectTimeout` and<br/>
+:exc:`~requests.exceptions.ReadTimeout` errors.<br/>
+class ConnectTimeout(ConnectionError, Timeout):<br/>
+The request timed out while trying to connect to the remote server.<br/>
+Requests that produced this error are safe to retry.<br/>
+class ReadTimeout(Timeout):<br/>
+The server did not send any data in the allotted amount of time.<br/>
+class URLRequired(RequestException):<br/>
+A valid URL is required to make a request.<br/>
+class TooManyRedirects(RequestException):<br/>
+Too many redirects.<br/>
+class MissingSchema(RequestException, ValueError):<br/>
+The URL schema (e.g. http or https) is missing.<br/>
+class InvalidSchema(RequestException, ValueError):<br/>
+See defaults.py for valid schemas.<br/>
+class InvalidURL(RequestException, ValueError):<br/>
+The URL provided was somehow invalid. <br/>
+class ChunkedEncodingError(RequestException):<br/>
+The server declared chunked encoding but sent an invalid chunk.<br/>
+class ContentDecodingError(RequestException, BaseHTTPError):<br/>
+Failed to decode response content<br/>
+class StreamConsumedError(RequestException, TypeError):<br/>
+The content for this response was already consumed<br/>
+class RetryError(RequestException):<br/>
+Custom retries logic failed<br/>
+requests.hooks<br/>
+~~~~~~~~~~~~~~<br/>
+This module provides the capabilities for the Requests hooks system.<br/>
+Available hooks:<br/>
+``response``:<br/>
+The response generated from a Request.<br/>
+def dispatch_hook(key, hooks, hook_data, **kwargs):<br/>
+Dispatches a hook dictionary on a given piece of data.<br/>
+requests.models<br/>
+~~~~~~~~~~~~~~~<br/>
+This module contains the primary objects that power Requests.<br/>
+class RequestHooksMixin(object):<br/>
+def register_hook(self, event, hook):<br/>
+Properly register a hook.<br/>
+def deregister_hook(self, event, hook):<br/>
+Deregister a previously registered hook.<br/>
+Returns True if the hook existed, False if not.<br/>
+class Request(RequestHooksMixin):<br/>
+A user-created :</span> <span id="co-1-20735" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">class:`Request  &amp;amp; lt;Request &amp;amp; gt;` object</span> <span id="co-1-20781" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">.<br/>
+Used to prepare a :class:`PreparedRequest  &amp;amp; lt;PreparedRequest &amp;amp; gt;`, which is sent to the server.<br/>
+:param method: HTTP method to use.<br/>
+:param url: URL to send.<br/>
+:param headers: dictionary of headers to send.<br/>
+:param files: dictionary of {filename: fileobject} files to multipart upload.<br/>
+:param data: </span> <span id="co-1-21088" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">the body to attach to the request. </span> <span id="co-1-21123" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">If a dictionary is provided, form-encoding will take place.<br/>
+:param json: json for </span> <span id="co-1-21205" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">the body to attach to the request (</span> <span id="co-1-21240" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">if data is not specified).<br/>
+:param params: dictionary of URL parameters to append to the URL.<br/>
+:param auth: Auth handler or (user, pass) tuple.<br/>
+:</span> <span id="co-1-21383" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">param cookies: dictionary or CookieJar </span> <span id="co-1-21422" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">of cookies to attach to this request.<br/>
+:param hooks: dictionary of callback hooks, for internal usage.<br/>
+</span> <span id="co-1-21525" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 10%; GRP Power: 0% = 0 / 4">&lt;!-- bba91b68-7842-4c91-a085-082f2f36bf17 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-21581" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 10%; GRP Power: -25% = -1 / 4">Usage::<br/>
+</span> <span id="co-1-21590" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 100%; GRP Power: -25% = -1 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-21614" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 10%; GRP Power: -25% = -1 / 4"> import requests<br/>
+</span> <span id="co-1-21631" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 100%; GRP Power: -25% = -1 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-21655" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 10%; GRP Power: -25% = -1 / 4"> req = requests.Request('GET', 'http://httpbin.org/get')</span> <span id="co-1-21711" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 10%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; bba91b68-7842-4c91-a085-082f2f36bf17 --&gt;</span> <span id="co-1-21767" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4"></span> <span id="co-1-21768" style="background-color: rgb(255, 64, 64);" title="Clones coverage: 100%; GRP Power: 75% = 3 / 4">&amp;amp;</span> <span id="co-1-21773" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 100%; GRP Power: 50% = 2 / 4">gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-21792" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"> req.prepare()<br/>
+ &amp;amp; lt;PreparedRequest [GET] &amp;amp; gt;<br/>
+</span> <span id="co-1-21846" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">class PreparedRequest(RequestEncodingMixin, RequestHooksMixin):<br/>
+The fully mutable :class:`PreparedRequest  &amp;amp; lt;PreparedRequest &amp;amp; gt;` object,<br/>
+containing the exact bytes that will be sent to the server.<br/>
+Generated from either </span> <span id="co-1-22076" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 10%; GRP Power: 25% = 1 / 4">a :</span> <span id="co-1-22079" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4">class:`Request  &amp;amp; lt;Request &amp;amp; gt;`</span> <span id="co-1-22118" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"> object</span> <span id="co-1-22125" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4"> or manually.<br/>
+</span> <span id="co-1-22140" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 10%; GRP Power: 0% = 0 / 4">&lt;!-- bba91b68-7842-4c91-a085-082f2f36bf17 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-22196" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 10%; GRP Power: -25% = -1 / 4">Usage::<br/>
+</span> <span id="co-1-22205" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 100%; GRP Power: -25% = -1 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-22229" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 10%; GRP Power: -25% = -1 / 4"> import requests<br/>
+</span> <span id="co-1-22246" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 100%; GRP Power: -25% = -1 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-22270" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 10%; GRP Power: -25% = -1 / 4"> req = requests.Request('GET', 'http://httpbin.org/get')</span> <span id="co-1-22326" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 10%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; bba91b68-7842-4c91-a085-082f2f36bf17 --&gt;</span> <span id="co-1-22382" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4"></span> <span id="co-1-22383" style="background-color: rgb(255, 64, 64);" title="Clones coverage: 100%; GRP Power: 75% = 3 / 4">&amp;amp;</span> <span id="co-1-22388" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 100%; GRP Power: 50% = 2 / 4">gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-22407" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"></span> <span id="co-1-22408" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">r = </span> <span id="co-1-22412" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">req.prepare()<br/>
+ &amp;amp; lt;PreparedRequest [GET]</span> <span id="co-1-22455" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 100%; GRP Power: 50% = 2 / 4">&amp;amp; gt;<br/>
+</span> <span id="co-1-22465" style="background-color: rgb(255, 64, 64);" title="Clones coverage: 100%; GRP Power: 75% = 3 / 4">&amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-22481" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4">&amp;amp; gt; s = requests.Session()<br/>
+</span> <span id="co-1-22513" style="background-color: rgb(255, 64, 64);" title="Clones coverage: 100%; GRP Power: 75% = 3 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-22537" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4"></span> <span id="co-1-22538" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">s.</span> <span id="co-1-22540" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">send(r)<br/>
+</span> <span id="co-1-22548" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">&amp;amp; lt;Response [200] &amp;amp; gt;<br/>
+</span> <span id="co-1-22580" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">def prepare(self, method=None, url=None, headers=None, files=None,<br/>
+data=None, params=None, auth=None, cookies=None, hooks=None,<br/>
+json=None):<br/>
+Prepares the entire request with the given parameters.<br/>
+def prepare_method(self, method):<br/>
+Prepares the given HTTP method.<br/>
+def prepare_url(self, url, params):<br/>
+Prepares the given HTTP URL.<br/>
+def prepare_auth(self, auth, url=''):<br/>
+Prepares the given HTTP auth data.<br/>
+class Response(object):<br/>
+The :class:`Response  &amp;amp; lt;Response &amp;amp; gt;` object, which contains a<br/>
+server's response to an HTTP request.<br/>
+def __bool__(</span> <span id="co-1-23131" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">self):<br/>
+Returns true if :attr:`status_code` is 'OK'.<br/>
+def </span> <span id="co-1-23188" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">__nonzero__(</span> <span id="co-1-23200" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">self):<br/>
+Returns true if :attr:`status_code` is 'OK'.<br/>
+def </span> <span id="co-1-23257" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">__iter__(self):<br/>
+Allows you to use a response as an iterator.<br/>
+def is_redirect(</span> <span id="co-1-23335" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">self):<br/>
+True if this Response </span> <span id="co-1-23364" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">is a well-formed HTTP redirect that could have<br/>
+been processed automatically (by :meth:`Session.resolve_redirects`).<br/>
+def is_permanent_redirect(</span> <span id="co-1-23507" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">self):<br/>
+True if this Response </span> <span id="co-1-23536" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">one of the permanant versions of redirect<br/>
+def apparent_encoding(self):<br/>
+The apparent encoding, provided by the chardet library<br/>
+def iter_content(self, chunk_size=1, decode_unicode=False):<br/>
+</span> <span id="co-1-23724" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- 02fcbfd1-32db-4605-930d-4d49b5f8a7b6 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-23780" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">Iterates over the response data</span> <span id="co-1-23811" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">. </span> <span id="co-1-23814" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">When stream=True is set on the<br/>
+request, this avoids reading the content at once into memory for<br/>
+large responses.</span> <span id="co-1-23926" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; 02fcbfd1-32db-4605-930d-4d49b5f8a7b6 --&gt;</span> <span id="co-1-23982" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4"> The chunk size is the number of bytes it should<br/>
+read into memory. This is not necessarily the length of each item<br/>
+returned as decoding can take place.<br/>
+If decode_unicode is True, content will be decoded using the best<br/>
+available encoding based on the response.<br/>
+def iter_lines(self, chunk_size=ITER_CHUNK_SIZE, decode_unicode=None, delimiter=None):<br/>
+</span> <span id="co-1-24333" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- 02fcbfd1-32db-4605-930d-4d49b5f8a7b6 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-24389" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">Iterates over the response data</span> <span id="co-1-24420" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">, one line at a time. </span> <span id="co-1-24443" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">When<br/>
+stream=True is set on the request, this avoids reading the<br/>
+content at once into memory for large responses.</span> <span id="co-1-24555" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; 02fcbfd1-32db-4605-930d-4d49b5f8a7b6 --&gt;</span> <span id="co-1-24611" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4"><br/>
+def content(</span> <span id="co-1-24625" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">self):<br/>
+Content of the response, in </span> <span id="co-1-24660" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">bytes.<br/>
+def text(</span> <span id="co-1-24677" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">self):<br/>
+Content of the response, in </span> <span id="co-1-24712" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">unicode.<br/>
+If Response.encoding is None, encoding will be guessed using<br/>
+``chardet``.<br/>
+The encoding of the response content is determined based solely on HTTP<br/>
+headers, following RFC 2616 to the letter. If you can take advantage of<br/>
+non-HTTP knowledge to make a better guess at the encoding, you should<br/>
+set ``r.encoding`` appropriately before accessing this property.<br/>
+def json(self, **kwargs):<br/>
+Returns the json-encoded content of a response, if any.<br/>
+:param \*\*kwargs: Optional arguments that ``json.loads`` takes.<br/>
+def links(self):<br/>
+Returns the parsed header links of the response, if any.<br/>
+def raise_for_status(self):<br/>
+Raises stored :class:`HTTPError`, if one occurred.<br/>
+def close(self):<br/>
+Releases the connection back to the pool. Once this method has been<br/>
+called the underlying ``raw`` object must not be accessed again.<br/>
+*Note: Should not normally need to be called explicitly.*<br/>
+requests.session<br/>
+~~~~~~~~~~~~~~~~<br/>
+This module provides a Session object to manage and persist settings across<br/>
+requests (cookies, auth, proxies).<br/>
+def merge_setting(request_setting, session_setting, dict_class=OrderedDict):<br/>
+Determines appropriate setting for a given request, taking into account the<br/>
+explicit setting on that request, and the setting in the session. If a<br/>
+setting is a dictionary, they will be merged together using `dict_class`<br/>
+def merge_hooks(request_hooks, session_hooks, dict_class=OrderedDict):<br/>
+Properly merges both requests and session hooks.<br/>
+This is necessary because when request_hooks == {'response': []}, the<br/>
+merge breaks Session hooks entirely.<br/>
+class SessionRedirectMixin(object):<br/>
+def resolve_redirects(self, resp, req, stream=False, timeout=None,<br/>
+verify=True, cert=None, proxies=None):<br/>
+Receives a Response. Returns a generator of Responses.<br/>
+def rebuild_auth(self, prepared_request, response):<br/>
+When being redirected we may want to strip authentication from the<br/>
+request to avoid leaking credentials. This method intelligently removes<br/>
+and reapplies authentication where possible to avoid credential loss.<br/>
+def rebuild_proxies(self, prepared_request, proxies):<br/>
+This method re-evaluates the proxy configuration by considering the<br/>
+environment variables. If we are redirected to a URL covered by<br/>
+NO_PROXY, we strip the proxy configuration. Otherwise, we set missing<br/>
+proxy keys for this URL (in case they were stripped by a previous<br/>
+redirect).<br/>
+This method also replaces the Proxy-Authorization header where<br/>
+necessary.<br/>
+class Session(SessionRedirectMixin):<br/>
+A Requests session.<br/>
+Provides cookie persistence, connection-pooling, and configuration.<br/>
+Basic </span> <span id="co-1-27271" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">Usage::<br/>
+</span> <span id="co-1-27280" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 100%; GRP Power: 50% = 2 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-27304" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"> import requests<br/>
+</span> <span id="co-1-27321" style="background-color: rgb(255, 0, 0);" title="Clones coverage: 100%; GRP Power: 100% = 4 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-27345" style="background-color: rgb(255, 64, 64);" title="Clones coverage: 10%; GRP Power: 75% = 3 / 4"> s = requests.Session()<br/>
+</span> <span id="co-1-27369" style="background-color: rgb(255, 0, 0);" title="Clones coverage: 100%; GRP Power: 100% = 4 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-27393" style="background-color: rgb(255, 64, 64);" title="Clones coverage: 10%; GRP Power: 75% = 3 / 4"></span> <span id="co-1-27394" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">s.</span> <span id="co-1-27396" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">get('http://httpbin.org/get')<br/>
+200<br/>
+def request(self, method, url,<br/>
+params=None,<br/>
+data=None,<br/>
+headers=None,<br/>
+cookies=None,<br/>
+files=None,<br/>
+auth=None,<br/>
+timeout=None,<br/>
+allow_redirects=True,<br/>
+proxies=None,<br/>
+hooks=None,<br/>
+stream=None,<br/>
+verify=None,<br/>
+cert=None,<br/>
+json=None):<br/>
+Constructs </span> <span id="co-1-27659" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 10%; GRP Power: 25% = 1 / 4">a :class:`Request  &amp;amp; lt;Request &amp;amp; gt;`</span> <span id="co-1-27701" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">, prepares it and sends it.<br/>
+</span> <span id="co-1-27729" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">Returns :class:`Response  &amp;amp; lt;Response &amp;amp; gt;` object.<br/>
+</span> <span id="co-1-27789" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- ccaca5c7-c16d-4069-bdba-511db1a95fa8 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-27845" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">:param method: method for the new :class:`Request` object.<br/>
+:param url: URL for the new :class:`Request` object.<br/>
+:param params: (optional) Dictionary or bytes to be sent in the query<br/>
+string for the :class:`Request`.<br/>
+:param data: (optional) Dictionary</span> <span id="co-1-28094" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4"> or bytes </span> <span id="co-1-28104" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">to send in the body of the<br/>
+:class:`Request`.<br/>
+:param json: (optional) json to send in the body of the<br/>
+:class:`Request`.<br/>
+:param headers: (optional) Dictionary of HTTP Headers to send with the<br/>
+:class:`Request`.<br/>
+:param cookies: (optional) Dict or CookieJar object to send with the<br/>
+:class:`Request`.<br/>
+:param files: (optional) Dictionary of ``'</span> <span id="co-1-28441" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">filename': file-like-objects``<br/>
+</span> <span id="co-1-28472" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">for multipart encoding upload.<br/>
+:param auth: (optional) Auth tuple </span> <span id="co-1-28538" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">or callable </span> <span id="co-1-28550" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">to enable<br/>
+Basic/Digest/Custom HTTP Auth.<br/>
+:param timeout: (optional) How long to wait for the server to send<br/>
+data before giving up, as a float, or a (`connect timeout, read<br/>
+timeout  &amp;amp; lt;user/advanced.html#timeouts &amp;amp; gt;`_) tuple.<br/>
+:type timeout: float or tuple<br/>
+:param allow_redirects: (optional) </span> <span id="co-1-28849" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">Set to True by default.<br/>
+:</span> <span id="co-1-28874" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">type allow_redirects: bool<br/>
+:param proxies: (optional) Dictionary mapping protocol to the URL of<br/>
+the proxy.<br/>
+:param </span> <span id="co-1-28988" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">stream: (optional) whether to immediately download the response<br/>
+content. Defaults to ``False``.</span> <span id="co-1-29083" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; ccaca5c7-c16d-4069-bdba-511db1a95fa8 --&gt;</span> <span id="co-1-29139" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"><br/>
+:</span> <span id="co-1-29141" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 7%; GRP Power: 50% = 2 / 4">param </span> <span id="co-1-29147" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">verify: (optional) if ``True``, the SSL cert will be verified.<br/>
+A CA_BUNDLE path can also be provided.<br/>
+:</span> <span id="co-1-29250" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 7%; GRP Power: 50% = 2 / 4">param </span> <span id="co-1-29256" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">cert: (optional) if String, path to ssl client cert file (.pem).<br/>
+If Tuple, ('cert', 'key') pair.<br/>
+</span> <span id="co-1-29354" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- a7eee1d9-105a-4e08-8c54-2fa1bb5e2908 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-29410" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">def get(</span> <span id="co-1-29418" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 14%; GRP Power: -25% = -1 / 4">self, url, **kwargs):<br/>
+Sends a </span> <span id="co-1-29448" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">GET request. Returns :class:`Response` object.<br/>
+:param url: URL for the new :class:`Request` object.<br/>
+:param \*\*kwargs: Optional arguments that ``request`` takes.<br/>
+def options(</span> <span id="co-1-29624" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 14%; GRP Power: -25% = -1 / 4">self, url, **kwargs):<br/>
+Sends a </span> <span id="co-1-29654" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">OPTIONS request. Returns :class:`Response` object.<br/>
+:param url: URL for the new :class:`Request` object.<br/>
+:param \*\*kwargs: Optional arguments that ``request`` takes.<br/>
+def head(</span> <span id="co-1-29831" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 14%; GRP Power: -25% = -1 / 4">self, url, **kwargs):<br/>
+Sends a </span> <span id="co-1-29861" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">HEAD request. Returns :class:`Response` object.<br/>
+:param url: URL for the new :class:`Request` object.<br/>
+:param \*\*kwargs: Optional arguments that ``request`` takes.<br/>
+def post(</span> <span id="co-1-30035" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">self, </span> <span id="co-1-30041" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">url, data=None, json=None, **kwargs):<br/>
+Sends a POST request. Returns :class:`Response` object.<br/>
+:param url: URL for the new :class:`Request` object.<br/>
+:</span> <span id="co-1-30190" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 10%; GRP Power: -25% = -1 / 4">param data: (optional) Dictionary, bytes, or file-like object to send in the body of the :class:`Request`.<br/>
+:param json: (optional) json </span> <span id="co-1-30326" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">to send in the body of the :class:`Request`.<br/>
+:param \*\*kwargs: Optional arguments that ``request`` takes.<br/>
+def put(self, </span> <span id="co-1-30448" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 14%; GRP Power: -25% = -1 / 4">url, data=None, **kwargs):<br/>
+Sends a </span> <span id="co-1-30483" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">PUT request. Returns :class:`Response` object.<br/>
+:param url: URL for the new :class:`Request` object.<br/>
+:param data: (optional) Dictionary, bytes, or file-like object to send in the body of the :class:`Request`.<br/>
+:param \*\*kwargs: Optional arguments that ``request`` takes.<br/>
+def patch(self, </span> <span id="co-1-30771" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 14%; GRP Power: -25% = -1 / 4">url, data=None, **kwargs):<br/>
+Sends a </span> <span id="co-1-30806" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">PATCH request. Returns :class:`Response` object.<br/>
+:param url: URL for the new :class:`Request` object.<br/>
+:param data: (optional) Dictionary, bytes, or file-like object to send in the body of the :class:`Request`.<br/>
+:param \*\*kwargs: Optional arguments that ``request`` takes.<br/>
+def delete(</span> <span id="co-1-31091" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 14%; GRP Power: -25% = -1 / 4">self, url, **kwargs):<br/>
+Sends a </span> <span id="co-1-31121" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">DELETE request. Returns :class:`Response` object.<br/>
+:param url: URL for the new :class:`Request` object.<br/>
+:param \*\*kwargs: Optional arguments that ``request`` takes.</span> <span id="co-1-31286" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- ACCEPT &gt;=&gt; a7eee1d9-105a-4e08-8c54-2fa1bb5e2908 --&gt;</span> <span id="co-1-31342" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"></span> <span id="co-1-31344" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">def send(self, request, **kwargs):<br/>
+Send a given PreparedRequest.<br/>
+def merge_environment_settings(self, url, proxies, stream, verify, cert):<br/>
+Check the environment and merge it with some settings.<br/>
+def close(self):<br/>
+Closes all adapters and as such the session<br/>
+def mount(self, prefix, adapter):<br/>
+Registers a connection adapter to a prefix.<br/>
+Adapters are sorted in descending order by key length.<br/>
+def session():<br/>
+Returns a :class:`Session` for context-management.<br/>
+requests.structures<br/>
+~~~~~~~~~~~~~~~~~~~<br/>
+Data structures that power Requests.<br/>
+class CaseInsensitiveDict(collections.MutableMapping):<br/>
+A case-insensitive ``dict``-like object.<br/>
+Implements all methods and operations of<br/>
+``collections.MutableMapping`` as well as dict's ``copy``. Also<br/>
+provides ``lower_items``.<br/>
+All keys are expected to be strings. The structure remembers the<br/>
+case of the last key to be set, and ``iter(instance)``,<br/>
+``keys()``, ``items()``, ``iterkeys()``, and ``iteritems()``<br/>
+will contain case-sensitive keys. However, querying and contains<br/>
+testing is case insensitive::<br/>
+cid = CaseInsensitiveDict()<br/>
+cid['Accept'] = 'application/json'<br/>
+cid['aCCEPT'] == 'application/json' # True<br/>
+list(cid) == ['Accept'] # True<br/>
+For example, ``headers['content-encoding']`` will return the<br/>
+value of a ``'Content-Encoding'`` response header, regardless<br/>
+of how the header name was originally stored.<br/>
+If the constructor, ``.update``, or equality comparison<br/>
+operations are given keys that have equal ``.lower()``s, the<br/>
+behavior is undefined.<br/>
+def lower_items(self):<br/>
+Like iteritems(), but with all lowercase keys.<br/>
+class LookupDict(dict):<br/>
+Dictionary lookup object.<br/>
+requests.utils<br/>
+~~~~~~~~~~~~~~<br/>
+This module provides utility functions that are used within Requests<br/>
+that are also useful for external consumption.<br/>
+def dict_to_sequence(d):<br/>
+Returns an internal sequence dictionary update.<br/>
+def get_netrc_auth(url):<br/>
+Returns the Requests tuple auth for a given url from netrc.<br/>
+def guess_filename(obj):<br/>
+Tries to guess the filename of the given object.<br/>
+def from_key_val_list(</span> <span id="co-1-33369" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">value):<br/>
+Take an object and test to see if it can be represented as a<br/>
+dictionary. </span> <span id="co-1-33450" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">Unless it can not be represented as such, return an<br/>
+OrderedDict, </span> <span id="co-1-33515" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">e.g.,<br/>
+::<br/>
+</span> <span id="co-1-33526" style="background-color: rgb(255, 0, 0);" title="Clones coverage: 100%; GRP Power: 100% = 4 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-33550" style="background-color: rgb(255, 64, 64);" title="Clones coverage: 10%; GRP Power: 75% = 3 / 4"></span> <span id="co-1-33551" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4">from_key_val_list(</span> <span id="co-1-33569" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">[('key', 'val')])<br/>
+OrderedDict([('key', 'val')])<br/>
+</span> <span id="co-1-33617" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 100%; GRP Power: 50% = 2 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-33641" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 10%; GRP Power: 25% = 1 / 4"> from_key_val_list(</span> <span id="co-1-33660" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">'string')<br/>
+ValueError: need more than 1 value to unpack<br/>
+</span> <span id="co-1-33715" style="background-color: rgb(255, 64, 64);" title="Clones coverage: 100%; GRP Power: 75% = 3 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-33739" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4"> from_key_val_list(</span> <span id="co-1-33758" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">{'key': 'val'})<br/>
+OrderedDict([('key', 'val')])<br/>
+</span> <span id="co-1-33804" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4"><br/>
+def to_key_val_list(</span> <span id="co-1-33825" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">value):<br/>
+Take an object and test to see if it can be represented as a<br/>
+dictionary. </span> <span id="co-1-33906" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">If it can be, return a list of tuples, </span> <span id="co-1-33945" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">e.g.,<br/>
+::<br/>
+</span> <span id="co-1-33956" style="background-color: rgb(255, 64, 64);" title="Clones coverage: 100%; GRP Power: 75% = 3 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-33980" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 10%; GRP Power: 50% = 2 / 4"></span> <span id="co-1-33981" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 10%; GRP Power: 25% = 1 / 4">to_key_val_list(</span> <span id="co-1-33997" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">[('key', 'val')])<br/>
+[('key', 'val')]<br/>
+</span> <span id="co-1-34032" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 100%; GRP Power: 50% = 2 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-34056" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 10%; GRP Power: 25% = 1 / 4"> to_key_val_list(</span> <span id="co-1-34073" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">{'key': 'val'})<br/>
+[('key', 'val')]<br/>
+</span> <span id="co-1-34106" style="background-color: rgb(255, 128, 128);" title="Clones coverage: 100%; GRP Power: 50% = 2 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-34130" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 10%; GRP Power: 25% = 1 / 4"> to_key_val_list(</span> <span id="co-1-34147" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">'string')<br/>
+ValueError: cannot encode objects that are not 2-tuples.<br/>
+def parse_list_header(value):<br/>
+Parse lists </span> <span id="co-1-34257" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">as described by RFC 2068 Section 2</span> <span id="co-1-34291" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">.<br/>
+In particular, parse comma-separated lists where the elements of<br/>
+the list may include quoted-strings. A quoted-string could<br/>
+contain a comma. A non-quoted string could have quotes in the<br/>
+middle. Quotes are removed automatically after parsing.<br/>
+It basically works like :func:`parse_set_header` just that items<br/>
+may appear multiple times and case sensitivity is preserved.<br/>
+The return value is a standard :class:`list`:<br/>
+</span> <span id="co-1-34714" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 100%; GRP Power: 25% = 1 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-34738" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4"> parse_list_header('token, "quoted value"')<br/>
+['token', 'quoted value']<br/>
+</span> <span id="co-1-34809" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- 6eb8af5f-ffe3-4f16-ad98-428a0f5ca957 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-34865" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">To create a header from the :class:`</span> <span id="co-1-34901" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">list` </span> <span id="co-1-34907" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">again, use the<br/>
+:func:`dump_header` function.<br/>
+:param value: a string with a </span> <span id="co-1-34983" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">list header.<br/>
+:return: :class:`list`<br/>
+</span> <span id="co-1-35019" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">&lt;!-- </span> <span id="co-1-35024" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">ACCEPT &gt;=&gt; 6eb8af5f-ffe3-4f16-ad98-428a0f5ca957 --&gt;</span> <span id="co-1-35075" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"><br/>
+def </span> <span id="co-1-35080" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">parse_dict_header(value):<br/>
+Parse lists of key, value pairs </span> <span id="co-1-35138" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">as described by RFC 2068 Section 2</span> <span id="co-1-35172" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4"> and<br/>
+convert them into a python dict:<br/>
+</span> <span id="co-1-35211" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 100%; GRP Power: 25% = 1 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-35235" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4"> d = parse_dict_header('foo="is a fish", bar="as well"')<br/>
+</span> <span id="co-1-35292" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 100%; GRP Power: 25% = 1 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-35316" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4"> type(d) is dict<br/>
+True<br/>
+</span> <span id="co-1-35338" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 100%; GRP Power: 25% = 1 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-35362" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4"> sorted(d.items())<br/>
+[('bar', 'as well'), ('foo', 'is a fish')]<br/>
+If there is no value for a key it will be `None`:<br/>
+</span> <span id="co-1-35476" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 100%; GRP Power: 25% = 1 / 4">&amp;amp; gt; &amp;amp; gt; &amp;amp; gt;</span> <span id="co-1-35500" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4"> parse_dict_header('key_without_value')<br/>
+{'key_without_value': None}<br/>
+</span> <span id="co-1-35569" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">&lt;!-- 6eb8af5f-ffe3-4f16-ad98-428a0f5ca957 &lt;=&lt; ACCEPT --&gt;</span> <span id="co-1-35625" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">To create a header from the :class:`</span> <span id="co-1-35661" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">dict` </span> <span id="co-1-35667" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 7%; GRP Power: -25% = -1 / 4">again, use the<br/>
+:func:`dump_header` function.<br/>
+:param value: a string with a </span> <span id="co-1-35743" style="background-color: rgb(0, 255, 255);" title="Clones coverage: 0%; GRP Power: -25% = -1 / 4">dict header.<br/>
+:return: :class:`dict`</span> <span id="co-1-35778" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">&lt;!-- </span> <span id="co-1-35783" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 7%; GRP Power: 0% = 0 / 4">ACCEPT &gt;=&gt; 6eb8af5f-ffe3-4f16-ad98-428a0f5ca957 --&gt;</span> <span id="co-1-35834" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4"><br/>
+def </span> <span id="co-1-35840" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">unquote_header_value(value, is_filename=False):<br/>
+rUnquotes a header value. (Reversal of :func:`quote_header_value`).<br/>
+This does not use the real unquoting but what browsers are actually<br/>
+using for quoting.<br/>
+:param value: the header value to unquote.<br/>
+def dict_from_cookiejar(cj):<br/>
+Returns a key/value dictionary from a CookieJar.<br/>
+:param cj: CookieJar object to extract cookies from.<br/>
+def add_dict_to_cookiejar(cj, cookie_dict):<br/>
+</span> <span id="co-1-36266" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">Returns a CookieJar from a key/value dictionary.<br/>
+:param </span> <span id="co-1-36323" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">cj: CookieJar to insert cookies into.<br/>
+:</span> <span id="co-1-36362" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">param cookie_dict: Dict of key/values to insert into CookieJar.<br/>
+</span> <span id="co-1-36426" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4"><br/>
+def get_encodings_from_content(content):<br/>
+Returns encodings from given content string.<br/>
+:param content: bytestring to extract encodings from.<br/>
+def get_encoding_from_headers(headers):<br/>
+Returns encodings from given HTTP Header Dict.<br/>
+:param headers: dictionary to extract encoding from.<br/>
+def stream_decode_response_unicode(iterator, r):<br/>
+Stream decodes a iterator.<br/>
+def iter_slices(string, slice_length):<br/>
+Iterate over slices of a string.<br/>
+def get_unicode_from_response(r):<br/>
+Returns the requested content back in unicode.<br/>
+:param r: Response object to get unicode content from.<br/>
+Tried:<br/>
+1. charset from content-type<br/>
+2. fall back and replace all unicode characters<br/>
+def unquote_unreserved(uri):<br/>
+Un-escape any percent-escape sequences in a URI that are unreserved<br/>
+characters. This leaves all reserved, illegal and non-ASCII bytes encoded.<br/>
+def requote_uri(uri):<br/>
+Re-quote the given URI.<br/>
+This function passes the given URI through an unquote/quote cycle to<br/>
+ensure that it is fully and consistently quoted.<br/>
+def address_in_network(ip, net):<br/>
+This function allows you to check if on IP belongs to a network subnet<br/>
+Example: returns True </span> <span id="co-1-37551" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">if ip = 192.168.1.1 and net = 192.168.</span> <span id="co-1-37589" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">1.0/24<br/>
+returns False </span> <span id="co-1-37610" style="background-color: rgb(255, 192, 192);" title="Clones coverage: 7%; GRP Power: 25% = 1 / 4">if ip = 192.168.1.1 and net = 192.168.</span> <span id="co-1-37648" style="background-color: rgb(255, 255, 255);" title="Clones coverage: 0%; GRP Power: 0% = 0 / 4">100.0/24<br/>
+def dotted_netmask(mask):<br/>
+Converts mask from /xx format to xxx.xxx.xxx.xxx<br/>
+Example: if mask is 24 function returns 255.255.255.0<br/>
+def is_valid_cidr(string_network):<br/>
+Very simple check of the cidr format in no_proxy variable<br/>
+def should_bypass_proxies(url):<br/>
+Returns whether we should bypass proxies or not.<br/>
+def get_environ_proxies(url):<br/>
+Return a dict of environment proxies.<br/>
+def default_user_agent(name="python-requests"):<br/>
+Return a string representing the default user agent.<br/>
+def parse_header_links(value):<br/>
+Return a dict of parsed link headers proxies.<br/>
+i.e. Link:  &amp;amp; lt;http:/.../front.jpeg &amp;amp; gt;; rel=front; type="image/jpeg", &amp;amp; lt;http://.../back.jpeg &amp;amp; gt;; rel=back;type="image/jpeg"<br/>
+def prepend_scheme_if_needed(url, new_scheme):<br/>
+Given a URL that may or may not have a scheme, prepend the given scheme.<br/>
+Does not replace a present scheme with the one provided as an argument.<br/>
+def get_auth_from_url(url):<br/>
+Given a url with authentication components, extract them into a tuple of<br/>
+username,password.<br/>
+def to_native_string(string, encoding='ascii'):<br/>
+Given a string object, regardless of type, returns a representation of that<br/>
+string in the native string type, encoding and decoding where necessary.<br/>
+This assumes ASCII unless told otherwise.<br/>
+def urldefragauth(url):<br/>
+Given a url remove the fragment and the authentication part<br/>
+</span> <br/>
+
+        </body>
+        </html>
