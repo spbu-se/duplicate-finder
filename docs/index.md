@@ -7,22 +7,31 @@ This tool is part of [DocLine project](http://www.math.spbu.ru/user/kromanovsky/
 Quick Guide
 -----------
 
-User can choose:
+### Reuse Map (Re)Generation and Pattern Search
+
+You can choose:
 
 * arbitrary XML (HTML, DocBook) or plain text document to analyze;
-* minimal and maximal repetition sizes (in words) the tool should consiider.
+* minimal and maximal repetition sizes (in words) the tool should consiider;
+* minimal repetiotion number the tool should consider.
 
-Then (s)he can get a visualized document repetition heat map in the browser (brief map in right panel and
-source document in left panel). After clicking right panel, left one scrolls to the corresponding place in the source.
-Places colored with ьore saturated color repeat more times in the document and are more interesting.
+Then you can get a visualized document reuse map in the browser (brief heat map in the right panel and
+source document in the left panel). After clicking right panel, left one scrolls to the corresponding place in the source.
+Places colored with more saturated red color repeat more times in the document and are more interesting.
 
-Then user can select interesting text fragment with mouse, hit any key and confirm searching for it.
+Then you can select interesting text fragment with mouse, hit any key and confirm searching for it.
 
 Searching can take some time on large fragments and documents. When it is complete, repetition browser is shown. With
-this browser, user can select instances found in document source text, correct their boundaries and mark them as useful
-or useless ones for future analysis. Then (s)he can save document with repetitions marked.
+this browser, you can select instances found in document source text, correct their boundaries and mark them as useful
+or useless ones for future analysis and then save source document with repetitions marked. To mark fragments usable or
+useless and to save source document, source document context menu is used.
 
 When running the tool next time, known repetitions will not affect heat map, so heat map will get cleaner and cleaner.
+
+### Duplicate Report
+
+Using a checkbox, you can select to display already marked duplicates
+instead of building heat map, and then export report with File manu if needed.
 
 Source Code
 ===========
