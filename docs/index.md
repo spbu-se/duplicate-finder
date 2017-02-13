@@ -2,6 +2,7 @@ Duplicate Finder
 ================
 
 Duplicate finder is a tool allowing finding and tracking inexact (fuzzy) repetitions in documents.
+This tool is part of [DocLine project](http://www.math.spbu.ru/user/kromanovsky/docline/index_en.html).
 
 Quick Guide
 -----------
