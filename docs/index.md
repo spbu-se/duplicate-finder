@@ -52,8 +52,8 @@ Here are examples of open source projects documentation available. Heat maps and
 
 | Project         | Document      | Source (plain text)                                    | Clean heat map                                                            | Heat map with duplicates marked                                            | (Near) Duplicates                                        |
 |-----------------|---------------|--------------------------------------------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------|----------------------------------------------------------|
-| GIMP            | User Manual   | [1574K](GIMP/user_guide.pxml){:target="_blank"}        | [Browse](GIMP/clean-heat-map/densitybrowser.html){:target="_blank"}       | [Browse](GIMP/marked-heat-map/densitybrowser.html){:target="_blank"}       | [17 groups](GIMP/near_dups.html){:target="_blank"}       |
-| Python Requests | API Reference | [36K](PyRequests/api_reference.pxml){:target="_blank"} | [Browse](PyRequests/clean-heat-map/densitybrowser.html){:target="_blank"} | [Browse](PyRequests/marked-heat-map/densitybrowser.html){:target="_blank"} | [11 groups](PyRequests/near_dups.html){:target="_blank"} |
+| [GIMP](https://gimp.org/)            | User Manual   | [1574K](GIMP/user_guide.pxml){:target="_blank"}        | [Browse](GIMP/clean-heat-map/densitybrowser.html){:target="_blank"}       | [Browse](GIMP/marked-heat-map/densitybrowser.html){:target="_blank"}       | [17 groups](GIMP/near_dups.html){:target="_blank"}       |
+| [Python Requests](http://python-requests.org/) | API Reference | [36K](PyRequests/api_reference.pxml){:target="_blank"} | [Browse](PyRequests/clean-heat-map/densitybrowser.html){:target="_blank"} | [Browse](PyRequests/marked-heat-map/densitybrowser.html){:target="_blank"} | [11 groups](PyRequests/near_dups.html){:target="_blank"} |
 
 System Requirements
 ===================
