@@ -66,7 +66,9 @@ Python
 * [LXML](https://pypi.python.org/pypi/lxml/3.6.0)
 * PyContracts, pygments, NumPy, intervaltree, bottle — `pip install PyContracts pygments NumPy intervaltree bottle`
 
-Package versions -- most recent ones compatible with Python 3.4
+Package versions -- most recent ones compatible with Python 3.4.
+
+*Note: newer PyQt and Python can also be used in case your distribution contains `QtWebkit` as in PyQt 5.5.x*
 
 Operating System
 ----------------
