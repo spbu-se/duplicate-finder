@@ -1,3 +1,9 @@
+---
+layout: default
+title: Duplicate Finder
+description: Duplicate finder is a tool for discovering and tracking near and exact duplicates in documents
+---
+
 Duplicate Finder
 ================
 
