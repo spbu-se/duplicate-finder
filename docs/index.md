@@ -13,9 +13,10 @@ This tool is a part of [DocLine project](http://www.math.spbu.ru/user/kromanovsk
 Quick Guide
 -----------
 
-### Reuse Map (Re)Generation and Pattern Search
 
-If you have a software document for duplicate search you should convert it to plain text
+### Document Preparation
+
+If you have a document for duplicate search you should convert it to plain text
 and wrap into two XML tags before (see [Examples](#examples)). For many document formats
 you can do this using [Pandoc](http://pandoc.org/) utility and `wrap-into-xml.py` Python
 script which is located in the [tool source code](#source-code) folder.
@@ -23,7 +24,10 @@ See example command line (both Windows and UNiX) below:
 
     pandoc -t plain MyDocument.docx | python wrap-into-xml.py >MyDocument.pxml
 
-After that you can launch Duplicate Finder using its `duplicate-finder.py` startup script.
+
+### Reuse Map (Re)Generation, Pattern Selection and Near Duplicate Search
+
+To see reuse map, you can launch Duplicate Finder using its `duplicate-finder.py` startup script.
 You can select input document file (`MyDocument.pxml` above) and adjust following options:
 
 * minimal and maximal duplicate size (in tokens) the tool should consider;
@@ -46,7 +50,7 @@ useless and to save source document, source document context menu is used.
 
 When running the tool next time, known duplicates will not affect reuse map, so reuse map will get cleaner and cleaner.
 
-### Duplicate Report
+### (Near) Duplicate Report
 
 Using a checkbox, you can select to display already marked duplicates
 instead of building reuse map, and then export report with *File* menu if needed.
