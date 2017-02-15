@@ -16,7 +16,7 @@ Quick Guide
 
 ### Document Preparation
 
-If you have a document for duplicate search you should convert it to plain text
+If you have a software document for duplicate search you should convert it to plain text
 and wrap into two XML tags before (see [Examples](#examples)). For many document formats
 you can do this using [Pandoc](http://pandoc.org/) utility and `wrap-into-xml.py` Python
 script which is located in the [tool source code](#source-code) folder.
