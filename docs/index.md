@@ -25,7 +25,7 @@ See example command line (both Windows and UNiX) below:
     pandoc -t plain MyDocument.docx | python wrap-into-xml.py >MyDocument.pxml
 
 
-### Reuse Map (Re)Generation, Pattern Selection and Near Duplicate Search
+### Reuse Map (Re)Generation, Pattern Selection, Near Duplicate Search and Analysis
 
 To see reuse map, you can launch Duplicate Finder using its `duplicate-finder.py` startup script.
 You can select input document file (`MyDocument.pxml` above) and adjust following options:
