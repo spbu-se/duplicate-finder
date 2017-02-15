@@ -29,7 +29,7 @@ You can select input document file (`MyDocument.pxml` above) and adjust followin
 * minimal and maximal duplicate size (in tokens) the tool should consider;
 * minimal duplicate number the tool should consider.
 
-Roughly speaking, *token* stands wor a word here.
+Roughly speaking, *token* stands for a word here.
 
 Then you can get a visualized document reuse map in the browser (brief reuse map in the right panel and
 source document in the left panel). After clicking right panel, left one scrolls to the corresponding place in the source.
