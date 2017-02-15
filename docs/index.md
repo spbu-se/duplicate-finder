@@ -62,10 +62,10 @@ Examples
 
 Here are examples of open source projects documentation available. Reuse maps and duplicate lists are created using Duplicate Finder toolkit.
 
-| Project         | Document      | Source (plain text)                                    | Clean heat map                                                            | Heat map with duplicates marked                                            | (Near) Duplicates                                        |
+| Project         | Document      | Source (plain text)                                    | Clean reuse map                                                            | Reuse map with duplicates marked                                            | (Near) Duplicates                                        |
 |-----------------|---------------|--------------------------------------------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------|----------------------------------------------------------|
-| [GIMP](https://gimp.org/)            | User Manual   | [1574K](GIMP/user_guide.pxml){:target="_blank"}        | [Browse](GIMP/clean-heat-map/densitybrowser.html){:target="_blank"}       | [Browse](GIMP/marked-heat-map/densitybrowser.html){:target="_blank"}       | [17 groups](GIMP/near_dups.html){:target="_blank"}       |
-| [Python Requests](http://python-requests.org/) | API Reference | [36K](PyRequests/api_reference.pxml){:target="_blank"} | [Browse](PyRequests/clean-heat-map/densitybrowser.html){:target="_blank"} | [Browse](PyRequests/marked-heat-map/densitybrowser.html){:target="_blank"} | [11 groups](PyRequests/near_dups.html){:target="_blank"} |
+| [GIMP](https://gimp.org/)            | User Manual   | [Download, 1574K](GIMP/user_guide.pxml)        | [Browse](GIMP/clean-heat-map/densitybrowser.html){:target="_blank"}       | [Browse](GIMP/marked-heat-map/densitybrowser.html){:target="_blank"}       | [Browse 17 groups](GIMP/near_dups.html){:target="_blank"}       |
+| [Python Requests](http://python-requests.org/) | API Reference | [Download, 36K](PyRequests/api_reference.pxml) | [Browse](PyRequests/clean-heat-map/densitybrowser.html){:target="_blank"} | [Browse](PyRequests/marked-heat-map/densitybrowser.html){:target="_blank"} | [Browse 11 groups](PyRequests/near_dups.html){:target="_blank"} |
 
 System Requirements
 ===================
